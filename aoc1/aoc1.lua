@@ -1,4 +1,4 @@
-local f = io.open("input.txt", "r")
+local f = io.open(arg[1], "r")
 local elves = {}
 local sum = 0
 local value
@@ -22,6 +22,7 @@ end
 -- if we want to maintain ids, store them in the table values.
 table.sort(elves, function (a, b) return a > b end)
 
-print("Top elf carries " .. elves[1] .. " calories.")
-local top3 = elves[1] + elves[2] + elves[3]
+print("Top elf carries " .. (elves[1] or  0) .. " calories.")
+
+local top3 = (elves[1] or 0) + (elves[2] or 0) + (elves[3] or 0)
 print("Top 3 elves carry " .. top3 .. " calories")
