@@ -1,4 +1,3 @@
-local queue = {}
 local function string_to_set(s)
     local t = {}
     for i = 1, #s do
